@@ -1,0 +1,88 @@
+@import '../../../assets/theme/_var.scss';
+
+.CommonModal {
+    :global {
+        .modal-dialog {
+            padding: 10px;
+            margin: 0 auto;
+            min-height: 100vh;
+
+            @media (max-width: 575px) {
+                padding: 20px;
+            }
+
+            .modal-content {
+                @extend %backgroundBlack;
+                border-radius: 26px;
+                border: none;
+                margin-top: 180px;
+
+                .modal-header {
+                    border: none;
+                    padding: 35px 25px 50px;
+                    position: relative;
+
+                    @media (max-width: 1439px) {
+                        padding: 30px 22px;
+                    }
+
+                    @media (max-width: 767px) {
+                        padding: 24px 14px;
+                    }
+
+                    :local(.crossBtn) {
+                        border: none;
+                        outline: none;
+                        position: absolute;
+                        top: 25px;
+                        padding: 0;
+                        display: flex;
+                        right: 25px;
+                        width: 15px;
+                        height: 15px;
+                        background-color: transparent;
+
+                        @media (max-width: 575px) {
+                            right: 18px;
+                            top: 18px;
+                        }
+                    }
+
+                    .modal-title {
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 30px;
+                        text-align: center;
+                        width: 100%;
+
+                        @media (max-width: 1199px) {
+                            font-size: 18px;
+                        }
+
+                        @media (max-width: 489px) {
+                            font-size: 16px;
+                        }
+                    }
+
+                    :local(.large) {
+                        @media (min-width: 1600px) {
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                .modal-body {
+                    padding: 0 25px 25px;
+
+                    @media (max-width: 1439px) {
+                        padding: 0 22px 22px;
+                    }
+
+                    @media (max-width: 767px) {
+                        padding: 0 14px 14px;
+                    }
+                }
+            }
+        }
+    }
+}

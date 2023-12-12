@@ -1,0 +1,49 @@
+@import '../../../assets/theme/_var.scss';
+
+.NoRecordFound {
+    border: none;
+
+    td {
+        padding: 0;
+        border: none;
+    }
+
+    &Inner {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 10px;
+        // background-color: rgba($darkBg, 0.4);
+        border-radius: 10px;
+
+        svg {
+            max-width: 40px;
+            height: auto;
+            opacity: 0.8;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            opacity: 0.8;
+            line-height: 28px;
+        }
+
+        @media (max-width: 991px) {
+            padding: 20px 10px;
+
+            svg {
+                max-width: 32px;
+            }
+
+            p {
+                margin-top: 4px;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}

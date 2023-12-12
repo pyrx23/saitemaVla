@@ -1,0 +1,82 @@
+@import "../../../assets/theme/_var.scss";
+.PoolsInfo {
+  :global {
+    .modal-dialog {
+      max-width: 800px;
+    }
+  }
+  .PoolsInfoTable {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+
+    .label_tab {
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      // padding-right: 2.5rem;
+      // padding-right: 2rem;
+      label {
+        width: 6rem;
+        &:last-child {
+          padding-left: 1rem;
+        }
+      }
+    }
+    .timer_and_status {
+      span {
+        width: 6rem;
+        &:last-child {
+          padding-left: 1rem;
+        }
+      }
+    }
+
+    table {
+      thead {
+        tr {
+          th {
+            background-color: #4b43bfc4;
+            &:first-child {
+              border-radius: 26px 0 0 26px;
+              min-width: 22px;
+              width: 22px;
+            }
+            &:nth-last-child(2) {
+              border-radius: 0 26px 26px 0;
+            }
+            &:last-child {
+              display: none;
+              min-width: 22px;
+              width: 22px;
+              border-radius: 0 26px 26px 0;
+              position: absolute !important;
+              right: 95px !important;
+            }
+          }
+        }
+      }
+      tbody {
+        counter-reset: tbody;
+        tr {
+          td {
+            p.counter_text {
+              &::before {
+                counter-increment: tbody;
+                content: counter(tbody);
+              }
+            }
+            &:last-child {
+              border-bottom: 1px solid rgba($white, 0.07) !important;
+            }
+          }
+          &:last-child {
+            td {
+              border-bottom: none !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

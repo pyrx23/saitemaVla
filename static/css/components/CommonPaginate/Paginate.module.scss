@@ -1,0 +1,53 @@
+@import '../../assets/theme/_var.scss';
+
+.CommonPaginate {
+    margin-top: 30px;
+
+    @media (max-width: 991px) {
+        margin-top: 20px;
+    }
+
+    :global {
+
+        ul,
+        .ant-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                height: fit-content;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                margin: 0;
+
+                a {
+                    font-size: 15px;
+                    text-align: center;
+                    color: $white;
+                    border-radius: 6px;
+                    padding: 4px 8px;
+                    background-color: transparent;
+                    line-height: 22.5px;
+                    font-family: $baseFont;
+                    letter-spacing: 0;
+                    display: inline-block;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+
+                &.active,
+                &.ant-pagination-item-active {
+
+                    a {
+                        color: $white;
+                        border: 1px solid;
+                    }
+                }
+            }
+        }
+    }
+}

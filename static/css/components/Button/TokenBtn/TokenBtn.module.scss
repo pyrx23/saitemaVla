@@ -1,0 +1,58 @@
+@import '../../../assets/theme/_var.scss';
+
+
+.TokenBtn {
+    border-radius: 35px;
+    background-color: rgba($white , 0.1);
+    border: none;
+    outline: none;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+    justify-content: space-between;
+    position: relative;
+
+    &:hover {
+        background-color: rgba($white, 0.2);
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+
+    p {
+        font-size: 14px;
+        color: $white;
+        font-weight: 500;
+        line-height: 20px;
+        margin: 0 9px 0 10px;
+    }
+
+    @media (max-width: 1599px) {
+        height: 32px;
+        min-width: 80px;
+
+        p {
+            font-size: 12px;
+            margin: 0 5px;
+        }
+    }
+
+    @media (max-width:479px) {
+        width: fit-content;
+        flex-shrink: 0;
+    }
+
+    &.transparent {
+        background-color: transparent;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+}

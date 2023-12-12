@@ -1,0 +1,53 @@
+@import "../../../assets/theme/_var.scss";
+
+.FarmPage {
+  margin-bottom: 40px;
+
+  .BannerVideo {
+    p {
+      max-width: 536px !important;
+      opacity: 0.8;
+    }
+  }
+
+  .FarmPageForm {
+    display: flex;
+    align-items: center;
+    margin-bottom: 23px;
+    justify-content: space-between;
+
+
+    .searchInput {
+      max-width: 194px;
+
+      input {
+
+        &::placeholder {
+          color: $white;
+          opacity: 1;
+        }
+      }
+
+      svg {
+        g {
+          opacity: 1;
+        }
+
+        path {
+          opacity: 1;
+          fill: $white;
+        }
+      }
+    }
+
+    @media (max-width: 379px) {
+      display: block;
+
+      .searchInput {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
+}

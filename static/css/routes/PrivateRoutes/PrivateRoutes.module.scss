@@ -1,0 +1,97 @@
+@import '../../assets/theme/_var.scss';
+
+.PrivateRoutes {
+    display: flex;
+    flex-direction: column;
+    padding-top: 94px;
+    background-image: url('../../assets/images/backgrounds/auth-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .PrivateRoutesInner {
+        min-height: calc(100vh - 94px);
+    }
+
+    @media (max-width: 1439px) {
+        padding-top: 78px;
+
+        .PrivateRoutesInner {
+            min-height: calc(100vh - 78px);
+        }
+    }
+
+    @media (max-width: 1365px) {
+        padding-top: 75px;
+
+        .PrivateRoutesInner {
+            min-height: calc(100vh - 75px);
+        }
+    }
+
+    @media (max-width: 1199px) {
+        padding-top: 84px;
+
+        .PrivateRoutesInner {
+            min-height: calc(100vh - 84px);
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 90px;
+
+        .PrivateRoutesInner {
+            min-height: calc(100vh - 90px);
+        }
+    }
+
+    @media (max-width :479px) {
+        padding-top: 84px;
+
+        .PrivateRoutesInner {
+            min-height: calc(100vh - 84px);
+        }
+    }
+
+    @media (max-width: 389px) {
+        padding-top: 80px;
+
+        .PrivateRoutesInner {
+            min-height: calc(100vh - 80px);
+        }
+    }
+
+
+    &.gradientBg {
+        background: $black url('../../assets/images/backgrounds/gradient-background.svg');
+        background-size: cover;
+        // overflow: hidden;
+        // background: $black;
+        // position: relative;
+        // z-index: 0;
+
+        // &::after,
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     width: 2515px;
+        //     height: 2476px;
+        //     opacity: 0.4;
+        //     z-index: -1;
+        // }
+
+        // &::after {
+        //     background: transparent radial-gradient(closest-side at 50% 50%, #07DCC1 0%, #00000000 100%) 0% 0% no-repeat padding-box;
+        //     top: 0;
+        //     right: 0;
+        //     transform: translate(50%, -50%);
+        // }
+
+        // &::before {
+        //     background: transparent radial-gradient(closest-side at 50% 50%, #1C62FE 0%, #00000000 100%) 0% 0% no-repeat padding-box;
+        //     bottom: 0;
+        //     left: 0;
+        //     transform: translate(-50%, 50%);
+        // }
+    }
+}

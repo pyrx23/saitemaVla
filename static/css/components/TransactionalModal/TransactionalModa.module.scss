@@ -1,0 +1,33 @@
+@import '../../assets/theme/_var.scss';
+
+.transactionModal {
+  :global {
+    .modal-dialog {
+      .modal-content {
+        margin-top: 0;
+        .modal-header {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  .linkText {
+    animation: blink alternate infinite 600ms;
+    color: $white;
+  }
+}
+
+:global {
+  .modal-backdrop {
+    z-index: 1055;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

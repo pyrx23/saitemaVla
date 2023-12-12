@@ -1,0 +1,195 @@
+@import '../../../assets/theme/_var.scss';
+
+.StakePage {
+    padding: 120px 0 30px;
+
+
+    .StakePageHeading {
+        h1 {
+            margin-bottom: 60px;
+        }
+    }
+
+    @media (max-width: 1679px) {
+        padding: 100px 0 30px;
+
+        .StakePageHeading {
+            h1 {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    @media (max-width: 1439px) {
+        padding: 80px 0 30px;
+    }
+
+    @media (max-width: 1199px) {
+        padding: 60px 0 30px;
+    }
+
+    @media (max-width: 991px) {
+        padding: 50px 0 30px;
+    }
+
+    @media (max-width: 767px) {
+        .StakePageHeading {
+            h1 {
+                margin: 10px 0 0;
+            }
+        }
+    }
+
+
+    .StakePageCard {
+        .valueInput {
+            margin-top: 27px;
+
+            label {
+                margin-bottom: 10px;
+            }
+
+            input {
+                padding-left: 21px;
+            }
+
+            @media (max-width: 1439px) {
+                margin-top: 20px;
+            }
+
+            @media (max-width: 1199px) {
+                margin-top: 14px;
+            }
+
+            @media (max-width: 991px) {
+                margin-top: 6px;
+
+                label {
+                    font-size: 12px;
+                    margin-bottom: 4px;
+                }
+            }
+        }
+
+        .itemDuration {
+            margin: 20px 0 54px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            &Btn {
+                width: 89px;
+                padding: 0;
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            @media (max-width: 1439px) {
+                margin: 18px 0 30px;
+
+                &Btn {
+                    height: 30px;
+                    font-size: 12px;
+                    width: 70px;
+                }
+            }
+
+            @media (max-width: 1199px) {
+                margin: 14px 0 20px;
+            }
+        }
+
+        .stakingBtns {
+            display: flex;
+            align-items: center;
+
+            button {
+                margin-right: 26px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                @media (max-width: 1199px) {
+                    font-size: 14px;
+                    padding: 10px;
+                    margin-right: 18px;
+                }
+
+                @media (max-width: 991px) {
+                    margin-right: 10px;
+                }
+            }
+
+            @media (max-width: 420px) {
+                flex-direction: column-reverse;
+
+                button {
+                    margin: 0;
+
+                    &:last-child {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .stakeDetails {
+            margin-top: 41px;
+
+            @media (max-width: 1439px) {
+                margin-top: 30px;
+            }
+
+            @media (max-width: 1199px) {
+                margin-top: 20px;
+            }
+
+            ul {
+                li {
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        font-size: 14px;
+                        line-height: 27px;
+                        font-weight: 500;
+
+                        &:first-child {
+                            font-size: 12px;
+                            color: #E2E2E2;
+                        }
+
+                        &:last-child {
+                            color: $white;
+                        }
+
+                        @media (max-width: 767px) {
+                            font-size: 12px;
+
+                            &:first-child {
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .StakePageTable {
+        padding-top: 28px;
+
+        @media (max-width: 991px) {
+            padding-top: 20px;
+        }
+
+        @media (max-width: 767px) {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+}

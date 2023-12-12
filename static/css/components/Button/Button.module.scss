@@ -1,0 +1,118 @@
+@import "../../assets/theme/_var.scss";
+
+.CommonBtn {
+  height: 50px;
+  border: none;
+  outline: none;
+  color: $white;
+  border-radius: 25px;
+  padding: 0 24px;
+  font-size: 16px;
+  line-height: 25px;
+  z-index: 0;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  background: $gradientRev;
+  cursor: pointer;
+  font-weight: 600;
+
+  @media (max-width: 1679px) {
+    height: 46px;
+  }
+
+  @media (max-width: 1439px) {
+    height: 42px;
+    font-size: 14px;
+    padding: 0 16px;
+  }
+  @media (max-width: 991px) {
+      font-size: 13px;
+  }
+
+  &::after {
+    z-index: -1;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: $gradient;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  &[data-variant*='large'] {
+    height: 60px;
+    border-radius: 30px;
+
+    @media (max-width: 1439px) {
+      height: 46px;
+    }
+
+    @media (max-width: 991px) {
+      height: 42px;
+    }
+  }
+
+  &[data-variant*='small'] {
+    height: 40px;
+    font-size: 14px;
+
+    @media (max-width: 1439px) {
+      height: 36px;
+    }
+  }
+
+  &[data-variant*='xs-small'] {
+    font-size: 14px;
+    height: 33px;
+    padding: 0 16px;
+
+    @media (max-width: 1439px) {
+      height: 30px;
+      font-size: 12px;
+    }
+  }
+
+  &[data-variant*='bordered-white'] {
+    border: 1px solid $white;
+    background: transparent;
+
+    &::after {
+      opacity: 0;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &[data-variant*="bordered-green"] {
+    border: 1px solid $greenLightClr;
+    background: rgba($buttonGreenBg, 0.6);
+
+
+    &::after {
+      opacity: 0;
+    }
+
+    &:hover {
+      border-color: $white;
+    }
+  }
+
+}

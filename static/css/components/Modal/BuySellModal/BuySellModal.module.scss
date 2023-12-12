@@ -1,0 +1,111 @@
+@import '../../../assets/theme/_var.scss';
+
+
+.buysellModal {
+    :global {
+        .modal-dialog {
+            max-width: 556px;
+
+            @media (max-width: 1599px) {
+                max-width: 460px;
+            }
+
+            .modal-content {
+                .modal-header {
+                    @media (min-width: 1600px) {
+                        padding-bottom: 47px;
+                    }
+                }
+            }
+        }
+
+        .modal-body {
+            padding: 0 25px 40px !important;
+
+            .BuySell_Tab {
+                .nav {
+                    padding-bottom: 58px;
+
+                    @media (max-width: 1439px) {
+                        padding-bottom: 40px;
+                    }
+
+                    .nav-link {
+                        border-bottom: 0;
+                        position: relative;
+                        color: $opacitywhite;
+
+                        &::after {
+                            position: absolute;
+                            width: 100%;
+                            height: 4px;
+                            background: $gradient;
+                            bottom: 0;
+                            left: 0;
+                        }
+
+                        &.active {
+                            color: $white;
+
+                            &::after {
+                                content: "";
+                            }
+                        }
+                    }
+
+                }
+
+                .buysell_input {
+                    position: relative;
+
+                    .right_icon {
+                        position: absolute;
+                        right: 30px;
+                        top: 23px;
+
+                        @media (max-width: 1679px) {
+                            top: 16px;
+                        }
+
+                        @media (max-width:1439px) {
+                            top: 12px;
+                        }
+
+                        @media (max-width: 991px) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .min_value {
+                    margin-top: 6px;
+                    display: flex;
+                    justify-content: flex-end;
+                    color: $textLight5;
+                    font-size: 14px;
+                    line-height: 30px;
+                    font-weight: 500;
+
+                    span {
+                        color: $white;
+                    }
+
+                    @media (max-width: 575px) {
+                        font-size: 12px;
+                    }
+                }
+
+                .buysell_btn {
+                    max-width: 218px;
+                    width: 100%;
+                    margin: 50px auto 0;
+                    display: block;
+
+                    @media (max-width: 1439px) {
+                        margin: 30px auto 0;
+                    }
+                }
+            }
+        }
+    }
+}

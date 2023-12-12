@@ -1,0 +1,180 @@
+@import '../../../../assets/theme/_var.scss';
+
+.FarmPageTable {
+  table {
+    thead {
+      tr {
+        th {
+          width: calc((100% - 132px) / 5);
+
+          &:nth-last-child(2) {
+            width: 6rem;
+            padding-right: 3rem;
+          }
+        }
+      }
+    }
+
+    tbody {
+      .FarmAccordion {
+        h5 {
+          color: $white;
+          font-size: 15px;
+          font-weight: 300;
+        }
+
+        .FarmAccordionPool {
+          display: flex;
+          align-items: center;
+
+          .ThumbnailBox {
+            display: flex;
+            align-items: center;
+            z-index: 0;
+            margin-right: 10px;
+            flex-shrink: 0;
+
+            .ThumbnailIcon {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              overflow: hidden;
+
+              &:last-child {
+                z-index: -1;
+                margin-left: -15px;
+              }
+            }
+          }
+        }
+
+        .ShowBtn {
+          max-width: 92px;
+          width: 100%;
+          font-size: 12px;
+
+          span {
+            margin-left: 4px;
+          }
+        }
+      }
+
+      .FarmAccordionDesc {
+        td {
+          background-color: #1B2E42;
+        }
+
+        h5 {
+          color: $white;
+          font-size: 15px;
+          font-weight: 300;
+        }
+
+        p {
+          font-size: 12px;
+          opacity: 0.6;
+          line-height: 18px;
+        }
+
+        .stakedLp {
+          display: flex;
+          align-items: center;
+
+          .stakedLpAction {
+            display: flex;
+            align-items: center;
+
+            button {
+              margin-right: 13px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  // &.FarmPageTableActive {
+  //   table {
+  //     thead {
+  //       tr {
+  //         th {
+  //           &:nth-last-child(2) {
+  //             padding-right: 4rem;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  @media (max-width: 575px) {
+    table {
+      border-collapse: collapse;
+
+      tbody {
+        .FarmAccordion {
+          td {
+            &:first-child {
+              background-color: transparent;
+              display: block;
+            }
+          }
+
+          &.FarmAccordionActive {
+            td {
+              &:nth-last-child(2) {
+                border-radius: 0;
+              }
+            }
+          }
+        }
+
+        .FarmAccordionDesc {
+          td {
+            &:nth-child(2) {
+              border-radius: 0;
+
+              >* {
+                &:nth-child(2) {
+                  margin-left: auto;
+                  padding: 0 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 379px) {
+    table {
+      tbody {
+        .FarmAccordion {
+          td {
+
+            h5,
+            p {
+              font-size: inherit;
+            }
+
+            .ShowBtn {
+              max-width: 100%;
+            }
+          }
+        }
+
+        .FarmAccordionDesc {
+          td {
+
+            h5,
+            p {
+              font-size: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}

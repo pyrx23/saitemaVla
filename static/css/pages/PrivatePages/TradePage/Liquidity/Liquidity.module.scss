@@ -1,0 +1,180 @@
+@import '../../../../assets/theme/_var.scss';
+
+.Liquidity {
+  .addLiquidity {
+    background-color: rgba($white, 0.05);
+    border-radius: 10px;
+    padding: 23px 20px;
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      opacity: 0.6;
+      margin-bottom: 65px;
+
+      @media (max-width: 1679px) {
+        margin-bottom: 30px;
+      }
+      
+    }
+
+    a {
+      color: $greenLightClr;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      display: block;
+      margin: 0 auto;
+      width: fit-content;
+
+      span {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .yourLiquidity {
+    margin-top: 23px;
+
+    h4 {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 25px;
+      margin-bottom: 20px;
+
+      @media (max-width: 991px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .connectWallet {
+      display: block;
+      max-width: 206px;
+      width: 100%;
+      margin: 0 auto;
+
+      @media (max-width: 991px) {
+        max-width: 100%;
+      }
+    }
+    .detailsAccordion {
+      box-shadow: none;
+      :global {
+        .accordion-item {
+          border: none;
+          background-color: rgba($white, 0.05);
+          box-shadow: none;
+          .accordion-header {
+            .accordion-button {
+              box-shadow: none;
+              background-color: $darkBg;
+              border: none;
+              color: $white;
+
+              &::after {
+                content: unset;
+              }
+            }
+          }
+          .accordion-body {
+            color: rgba($white, 0.6);
+            .text-start {
+              li {
+                margin-bottom: 10px;
+                height: 20px;
+                font-size: 14px;
+
+
+              @media (max-width: 767px) {
+                font-size: 12px;
+              }
+              @media (max-width: 399px) {
+                  font-size: 11px;
+              }
+              }
+            }
+            .text-end {
+              li {
+                height: 20px;
+                margin-bottom: 10px;
+                font-size: 16px;
+
+              @media (max-width: 767px) {
+                font-size: 14px;
+              }
+              @media (max-width: 399px) {
+                  font-size: 12px;
+              }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .remove_liq_btn{
+      width: 100%;
+      &:not(:last-child){
+        margin-right: 10px;
+      }
+      @media (max-width: 991px) {
+        font-size: 12px;
+        padding-inline: 10px;
+      }
+      @media (max-width: 399px) {
+        font-size: 10px;
+        padding: 0;
+        &:not(:last-child){
+          margin-right: 5px;
+        }
+      }
+    }
+    .noLiquidity {
+      p {
+        font-size: 18px;
+        line-height: 30px;
+        color: rgba($white, 0.6);
+        text-align: center;
+
+        @media (max-width: 1439px) {
+          font-size: 16px;
+        }
+
+        @media (max-width: 991px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .tokeninfo {
+    margin-top: 32px;
+    max-width: 393px;
+
+    @media (max-width: 1439px) {
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-bottom: 3px;
+
+      @media (max-width: 991px) {
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      a {
+        color: $greenLightClr;
+        text-decoration: underline;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

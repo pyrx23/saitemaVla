@@ -1,0 +1,112 @@
+@import '../../../assets/theme/_var.scss';
+
+.SettingModal {
+  :global {
+    .modal-dialog {
+      .modal-content {
+        .modal-header {
+          padding-bottom: 32px;
+
+          @media (max-width: 1439px) {
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .SlippageTolerence {
+    position: relative;
+
+    input {
+      padding-right: 250px;
+      padding-left: 48px;
+
+      @media (max-width: 991px) {
+        padding-left: 30px;
+      }
+
+      @media (max-width: 379px) {
+        padding: 0 40px 0 20px;
+      }
+    }
+
+    .percentageText {
+      right: 240px;
+      left: unset;
+
+      @media (max-width: 575px) {
+        right: 190px;
+      }
+
+      @media (max-width: 379px) {
+        right: 20px;
+      }
+    }
+
+    &Action {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 16px;
+      position: absolute;
+      top: 30px;
+      right: 7px;
+      width: fit-content;
+
+      @media (max-width: 379px) {
+        position: static;
+      }
+
+      button {
+        margin-right: 10px;
+        width: 66px;
+        padding: 0;
+        text-align: center;
+
+        @media (max-width: 575px) {
+          width: 50px;
+          height: 34px;
+          font-size: 12px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .TransactionTimeout {
+    margin-top: 29px;
+
+    @media (max-width: 767px) {
+      margin-top: 20px;
+    }
+
+    h6 {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 25px;
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
+
+      span {
+        color: $greenLightClr;
+      }
+    }
+  }
+
+  .OkayBtn {
+    max-width: 143px;
+    width: 100%;
+    margin: 32px auto 0;
+    display: block;
+
+    @media (max-width: 767px) {
+      margin: 20px auto 0;
+    }
+  }
+
+}

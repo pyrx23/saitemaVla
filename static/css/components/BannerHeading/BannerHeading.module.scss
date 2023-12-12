@@ -1,0 +1,167 @@
+@import "../../assets/theme/_var.scss";
+
+.BannerHeading {
+  max-width: 582px;
+  text-align: center;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 65px;
+    position: relative;
+
+    .Stars {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateX(calc(-100% - 37px));
+    }
+
+    @media (max-width: 1679px) {
+      font-size: 36px;
+      line-height: 50px;
+
+      .Stars {
+        transform: translateX(-100%);
+      }
+    }
+
+    @media (max-width: 1439px) {
+      font-size: 26px;
+      line-height: 40px;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 24px;
+      line-height: 40px;
+
+      .Stars {
+        display: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+      font-size: 22px;
+      line-height: 36px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  p {
+    margin: 20px 0 31px;
+    color: $textLight4;
+    font-size: 16px;
+    line-height: 33px;
+
+    @media (max-width: 1679px) {
+      margin: 14px 0 20px;
+    }
+
+    @media (max-width: 1439px) {
+      margin: 10px 0 14px;
+    }
+
+    @media (max-width: 991px) {
+      margin: 10px 0 0;
+      line-height: 25px;
+      font-size: 14px;
+    }
+  }
+
+  .BannerHeadingLottie {
+    position: relative;
+
+    .SingleStar {
+      position: absolute;
+      right: 30px;
+      bottom: 80px;
+
+      @media (max-width: 1599px) {
+        right: -60px;
+        bottom: 80px;
+      }
+    }
+
+    .greenBlur {
+      background: linear-gradient(242deg, #07dcc1 0%, #1c62fe 100%) 0% 0%
+        no-repeat padding-box;
+      opacity: 0.3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 307px;
+      height: 307px;
+      transform: translate(-50%, -50%);
+      filter: blur(42px);
+      border-radius: 50%;
+    }
+
+    .BannerHeadingLottieIcon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      :global {
+        @keyframes blink {
+          from {
+            opacity: 0;
+            transform: scale(0);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+      img {
+        max-width: 100px;
+        animation: blink 2s cubic-bezier(0.47, 1.64, 0.41, 0.8) infinite;
+      }
+    }
+
+    @media (max-width: 1599px) {
+      max-width: 350px;
+      margin: 0 auto;
+
+      > div {
+        &:not(.BannerHeadingLottieIcon) {
+          max-width: 100%;
+        }
+      }
+
+      .BannerHeadingLottieIcon {
+        > div {
+          max-width: 100%;
+        }
+      }
+    }
+
+    @media (max-width: 1365px) {
+      max-width: 260px;
+
+      .greenBlur {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 389px) {
+      max-width: 200px;
+
+      .BannerHeadingLottieIcon {
+        > div {
+          max-width: 250px;
+        }
+      }
+    }
+  }
+}

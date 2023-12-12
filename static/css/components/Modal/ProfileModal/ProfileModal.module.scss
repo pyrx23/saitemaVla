@@ -1,0 +1,53 @@
+@import '../../../assets/theme/_var.scss';
+
+.ProfileModal {
+  :global {
+    .modal-dialog {
+      max-width: 420px;
+
+      .modal-content {
+        .modal-header {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .ProfileModalContent {
+    text-align: center;
+
+    .WalletAddress {
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      img {
+        max-width: 20px;
+        margin-left: 10px;
+        aspect-ratio: 1;
+        object-fit: contain;
+
+        &.CopyIcon {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .viewLink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+
+      img {
+        max-width: 20px;
+        margin-left: 10px;
+        aspect-ratio: 1;
+        object-fit: contain;
+
+        &.CopyIcon {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

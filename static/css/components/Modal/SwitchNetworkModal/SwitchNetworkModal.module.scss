@@ -1,0 +1,57 @@
+@import "../../../assets/theme/_var.scss";
+
+.SwitchNetwork {
+  :global {
+    .modal-dialog {
+      max-width: 420px;
+
+      .modal-content {
+        .modal-header {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .networkList {
+    display: flex;
+    align-items: center;
+
+    button {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  
+
+  .userDetiails {
+    text-align: center;
+
+    .walletAddress {
+      font-size: 14px;
+      margin: 20px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .viewLink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-width: 20px;
+        aspect-ratio: 1;
+        object-fit: contain;
+        margin-left: 10px;
+
+        &.copyIcon {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import "./assets/theme/_var.scss";
+
+body {
+  font-family: $baseFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $white;
+  background-color: $black;
+  min-width: 320px;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+span,
+a {
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: textfield;
+  margin: 0;
+  display: none;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.modal-backdrop {
+  &.show {
+    background-color: $black;
+    opacity: 0.8;
+  }
+}
+
+// .modal.fade .modal-dialog {
+//   transform: scale(0.4);
+//   transition: 180ms ease-in-out;
+// }
+
+// .modal.show .modal-dialog {
+//   transform: none;
+// }
+
+.container {
+  padding: 0 15px;
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1296px;
+  }
+
+  @media (min-width: 1600px) {
+    max-width: 1530px;
+  }
+
+  &-fluid {
+    padding: 0 15px;
+  }
+}
+
+.row {
+  margin: 0 -15px;
+
+  >div {
+    padding: 0 15px;
+  }
+}
+
+iframe {
+  display: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+sup {
+  font-size: 0.6rem;
+  top: -0.7em;
+}
+
+.table {
+  --bs-table-bg: transparent;
+}

@@ -1,0 +1,55 @@
+@import '../../../assets/theme/_var.scss';
+
+.SupplyModal {
+  .IconImg {
+    z-index: 0;
+  }
+  .poolIcon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    &:last-child {
+      z-index: -1;
+      position: relative;
+      margin-left: -16px;
+    }
+  }
+  
+
+  ul {
+    li {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      &.symbolRow {
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        h2 {
+          font-size: 16px;
+          margin-left: 10px;
+        }
+      }
+      .estimatetext {
+        text-align: center;
+        font-size: 14px;
+        margin: 10px 0;
+      }
+      h5 {
+        font-size: 14px;
+        color: rgba($white, 0.6);
+      }
+
+      span {
+        font-size: 14px;
+      }
+      ul {
+        width: 100%;
+        li {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}

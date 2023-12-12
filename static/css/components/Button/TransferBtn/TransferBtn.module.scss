@@ -1,0 +1,23 @@
+@import '../../../assets/theme/_var.scss';
+
+
+.TransferBtn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: block;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 10px auto;
+
+    @media (max-width: 1199px) {
+        width: 28px;
+        height: 28px;
+
+        svg {
+            max-width: 100%;
+        }
+    }
+}

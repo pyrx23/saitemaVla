@@ -1,0 +1,79 @@
+@import '../../../assets/theme/_var.scss';
+
+.commonSelect {
+    :global {
+        .select__control {
+            border-radius: 21px;
+            background-color: $inputBg;
+            border: none;
+            height: 42px;
+            cursor: pointer;
+
+            &.select__control--is-focused {
+                border: none;
+                box-shadow: none;
+            }
+
+            .select__value-container {
+                padding: 0 0 0 20px;
+                color: $white;
+
+                .select__placeholder {
+                    color: $white;
+                    opacity: 0.6;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                .select__single-value,
+                .select__input-container {
+                    color: inherit;
+                }
+
+            }
+
+            .select__indicators {
+                .select__indicator-separator {
+                    display: none;
+                }
+
+                .select__indicator {
+                    padding: 0 20px 0 10px;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .select__menu {
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: $inputBg;
+
+            &-list {
+                padding: 0;
+
+                .select__option {
+                    cursor: pointer;
+                    border-bottom: 1px solid rgba($white, 0.1);
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    &.select__option--is-focused {
+                        background-color: transparent;
+                    }
+
+                    &:hover,
+                    &.select__option--is-selected {
+                        background-color: rgba($white, 0.1);
+                    }
+                }
+            }
+        }
+
+    }
+}

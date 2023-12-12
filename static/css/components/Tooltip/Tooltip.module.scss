@@ -1,0 +1,43 @@
+@import '../../assets/theme/_var.scss';
+
+.Tooltip {
+    :global {
+        .tooltip-inner {
+            @extend %backgroundBlack;
+            padding: 10px 20px;
+            max-width: 280px;
+            width: max-content;
+            // background-color: $darkBg;
+
+            &::before {
+                border-left-color: #262632;
+            }
+
+            @media (max-width: 349px) {
+                max-width: 240px;
+            }
+        }
+    }
+
+    .TooltipTitle {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .TooltipDesc {
+        color: rgba($white, 0.8);
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 575px) {
+        .TooltipTitle {
+            font-size: 16px;
+        }
+
+        .TooltipDesc {
+            font-size: 12px;
+            margin-top: 4px;
+        }
+    }
+}

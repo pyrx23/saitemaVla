@@ -1,0 +1,28 @@
+@import '../../../assets/theme/_var.scss';
+
+
+.ComingSoon {
+    text-align: center;
+
+    :global {
+        .modal-dialog {
+            .modal-content {
+                .modal-body {
+                    padding: 40px;
+                }
+            }
+        }
+    }
+
+    .ClockIcon {
+        svg {
+            width: 50px;
+            height: auto;
+        }
+    }
+
+    h3 {
+        font-size: 22px;
+        margin: 20px 0;
+    }
+}

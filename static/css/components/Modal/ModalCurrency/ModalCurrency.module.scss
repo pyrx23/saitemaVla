@@ -1,0 +1,197 @@
+@import "../../../assets/theme/_var.scss";
+@import "../../../assets/theme/_mixins.scss";
+
+.ModalCurrency {
+  :global {
+    .modal-dialog {
+      max-width: 450px;
+
+      .modal-content {
+        margin-top: 100px;
+        @media (max-height: 889px) {
+          margin-top: 70px;
+        }
+        @media (max-height: 749px) {
+          margin-top: 40px;
+        }
+        .modal-header {
+          padding-bottom: 22px;
+        }
+      }
+    }
+    .disabled {
+      opacity: 0.5;
+      cursor: not-allowed !important;
+    }
+  }
+
+  .SearchIcon {
+    transform: translateY(-6px);
+  }
+
+  .ModalCurrencyInner {
+    max-height: 600px;
+    overflow: hidden auto;
+    @media (max-height: 889px) {
+      max-height: 500px;
+    }
+    @media (max-height: 749px) {
+      max-height: 400px;
+    }
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 4px;
+      height: 4px;
+      background: $gradient;
+      border-radius: 10px;
+    }
+
+    .TokenList {
+      padding: 25px 0;
+
+      display: flex;
+      flex-wrap: wrap;
+      margin: -10px -5px;
+
+      li {
+        flex: 0 0 calc(100% / 3);
+        padding: 5px;
+
+        @media (max-width: 439px) {
+          flex: 0 0 calc(100% / 2);
+        }
+
+        button {
+          padding: 10px 8px;
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          display: flex;
+          align-items: center;
+          text-align: left;
+          border-radius: 10px;
+
+          &.active,
+          &:disabled {
+            cursor: not-allowed;
+            opacity: 0.4;
+            pointer-events: none;
+          }
+
+          &:not(.active) {
+            &:hover {
+              background-color: rgba($color: $white, $alpha: 0.05);
+            }
+          }
+
+          img {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-right: 5px;
+
+            @media (max-width: 575px) {
+              width: 24px;
+              height: 24px;
+            }
+          }
+
+          p {
+            color: $white;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 20px;
+          }
+        }
+      }
+
+      .noResult {
+        text-align: center;
+        flex: 0 0 100%;
+
+        p {
+          color: rgba($white, 0.6);
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    .line {
+      margin: 0;
+      padding: 0;
+      opacity: 0.1;
+      color: $white;
+    }
+
+    .TokenDetailsList {
+      padding: 20px 0 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:hover {
+          background-color: rgba($color: $white, $alpha: 0.05);
+        }
+
+        .tokenDetail {
+          display: flex;
+          align-items: center;
+
+          img {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 12px;
+
+            @media (max-width: 575px) {
+              width: 28px;
+              height: 28px;
+            }
+          }
+
+          &Inner {
+            p {
+              font-size: 14px;
+              font-weight: 300;
+              line-height: 20px;
+            }
+
+            h5 {
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 20px;
+            }
+          }
+        }
+
+        .tokenDetailValue {
+          h4 {
+            text-align: right;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../../../assets/theme/_var.scss';
+
+.Exchange {
+    .ExchangeBody {
+        .swapDetail {
+            ul {
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+
+                    h5 {
+                        font-size: 14px;
+                    }
+
+                    span {
+                        text-align: right;
+                        font-size: 14px;
+                        opacity: 0.6;
+                    }
+
+                }
+            }
+        }
+
+        .ExchangeBodyAction {
+            display: flex;
+            justify-content: center;
+            margin-top: 44px;
+
+            @media (max-width: 1599px) {
+                margin-top: 30px;
+            }
+
+            @media (max-width: 1439px) {
+                margin-top: 20px;
+            }
+
+            @media (max-width: 1365px) {
+                margin-top: 14px;
+            }
+        }
+    }
+}

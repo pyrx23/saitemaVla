@@ -1,0 +1,103 @@
+@import '../../../assets/theme/_var.scss';
+
+.RecentTransactions {
+  :global {
+    .modal-dialog {
+      max-width: 450px;
+
+      .modal-content {
+        .modal-body {
+          padding: 65px 0 41px;
+        }
+      }
+    }
+  }
+  &.noPadding {
+    :global {
+      .modal-dialog {
+        .modal-content {
+          .modal-body {
+            padding: 0 20px 40px;
+          }
+        }
+      }
+    }
+  }
+  .Transactions {
+    li {
+      margin: 0 0 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        margin: 0 auto;
+        color: $white;
+        max-width: 300px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 16px;
+        @media (max-width: 991px) {
+          font-size: 14px;
+        }
+        text-align: left;
+        svg {
+          margin: 0 10px;
+          &.success {
+            path {
+              fill: $greenLightClr;
+            }
+          }
+        }
+      }
+    }
+  }
+  .noTransaction {
+    text-align: center;
+
+    img {
+      @media (max-width: 991px) {
+        max-width: 80px;
+      }
+    }
+
+    p {
+      margin: 45px 0 28px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 20px;
+
+      @media (max-width: 991px) {
+        font-size: 16px;
+        margin: 30px 0 20px;
+      }
+    }
+
+    .closeBtn {
+      max-width: 147px;
+      width: 100%;
+    }
+  }
+}
+
+.transactionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.transactionText {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons svg {
+  margin-left: 10px;
+}

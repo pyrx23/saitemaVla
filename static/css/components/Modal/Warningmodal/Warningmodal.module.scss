@@ -1,0 +1,49 @@
+@import "../../../assets/theme/_var.scss";
+
+.warningModal {
+    :global {
+        .modal-dialog {
+            .modal-content {
+                .modal-header {
+                    .modal-title {
+                        color: yellow;
+                    }
+                }
+            }
+        }
+    }
+
+    .info_data {
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            text-align: center;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            span {
+                font-weight: 700;
+                color: yellow;
+            }
+        }
+
+        .btns_confim {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 35px;
+
+            .Btn_size {
+                margin-left: 25px;
+                width: 100%;
+                max-width: 150px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

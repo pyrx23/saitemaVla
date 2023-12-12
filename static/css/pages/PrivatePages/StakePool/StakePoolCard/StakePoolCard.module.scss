@@ -1,0 +1,215 @@
+@import "../../../../assets/theme/_var.scss";
+
+.stakeTable {
+  table {
+    thead {
+      tr {
+        th {
+          &:nth-last-child(2) {
+            width: 100px;
+          }
+        }
+      }
+    }
+
+    tbody {
+      .PoolCardHeader {
+        .PoolCoinDetail {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 37px;
+            height: 37px;
+            flex-shrink: 0;
+            border-radius: 50%;
+          }
+
+          &Inner {
+            padding-left: 8px;
+
+            h3 {
+              font-size: 15px;
+              // font-weight: 300;
+              font-weight: inherit;
+              color: $white;
+              line-height: 1;
+            }
+
+            p {
+              font-size: 12px;
+              // font-weight: 300;
+              font-weight: inherit;
+              line-height: 18px;
+            }
+          }
+        }
+
+        .timeText {
+          font-family: -webkit-body;
+        }
+
+        .showDescBtn {
+          max-width: 96px;
+          width: 100%;
+
+          span {
+            transition: 100ms ease-in-out;
+            margin-left: 4px;
+          }
+
+          &.active {
+            span {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      .PoolCardDesc {
+        .certik_partner {
+          margin-top: 48px;
+
+          p {
+            font-size: 16px;
+            line-height: 40px;
+            color: $textLight3;
+            font-weight: inherit;
+          }
+
+          img {
+            width: 129px;
+            height: 31px;
+          }
+        }
+
+        .lockBtn {
+          display: flex;
+          background-color: rgba($btnbg, 0.36);
+          align-items: center;
+
+          svg {
+            margin-right: 8px;
+          }
+        }
+
+        .disclaim {
+          max-width: 283px;
+          min-width: 220px;
+          width: 100%;
+          white-space: normal;
+
+          @media (max-width: 575px) {
+            text-align-last: right;
+            text-align: justify;
+          }
+        }
+
+        td {
+          vertical-align: top;
+          background-color: rgba($white, 0.1);
+
+          h5 {
+            font-size: 15px;
+            line-height: 23px;
+            // font-weight: 400;
+            font-weight: inherit;
+            margin-bottom: 6px;
+            color: $white;
+          }
+
+          p {
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: inherit;
+          }
+        }
+
+        .enable_btn {
+          margin-top: 22px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    table {
+      border-collapse: collapse;
+
+      tbody {
+        .PoolCardHeader {
+          td {
+            &:first-child {
+              display: block;
+              background-color: transparent;
+            }
+          }
+
+          &.PoolCardHeaderActive {
+            td {
+              &:nth-last-child(2) {
+                border-radius: 0;
+              }
+            }
+          }
+        }
+
+        .PoolCardDesc {
+          td {
+            h5 {
+              margin-bottom: 0;
+            }
+
+            .enable_btn {
+              margin-top: 0;
+            }
+
+            &:first-child {
+              border-top: 1px solid rgba($white, 0.07);
+              display: block;
+              padding: 0;
+            }
+
+            &:nth-child(2) {
+              border-radius: 0;
+            }
+
+            &:nth-last-child(2) {
+              // start staking buttons
+              align-items: center;
+            }
+
+            .certik_partner {
+              margin-top: 0;
+
+              img {
+                max-width: 100px;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 389px) {
+    table {
+      tbody {
+        .PoolCardDesc {
+          td {
+            h5,
+            p {
+              font-size: inherit;
+            }
+
+            .disclaim {
+              max-width: 220px;
+              min-width: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}
